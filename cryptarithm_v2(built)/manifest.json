@@ -1,0 +1,172 @@
+{
+  "family": "cryptarithm_deduce",
+  "token_limit": 8192,
+  "trace_caps": {
+    "median_lt": 3500,
+    "p90_lt": 3500,
+    "max_lt": 4500
+  },
+  "heldout_cells": [
+    "arith_mul",
+    "pos_rBrA"
+  ],
+  "regime_counts": {
+    "arith": 290,
+    "pos": 1900
+  },
+  "train": {
+    "n": 1920,
+    "completion_tokens": {
+      "min": 230,
+      "median": 288,
+      "p90": 311,
+      "max": 515
+    },
+    "total_tokens_max": 653
+  },
+  "heldout": {
+    "n": 270,
+    "completion_tokens": {
+      "min": 228,
+      "median": 291,
+      "p90": 313,
+      "max": 344
+    },
+    "total_tokens_max": 461
+  },
+  "per_cell": {
+    "arith_main": {
+      "n": 220,
+      "completion_tokens": {
+        "min": 230,
+        "median": 287,
+        "p90": 390,
+        "max": 515
+      },
+      "total_tokens_max": 653,
+      "split": "train",
+      "regime": "arith",
+      "n_examples_distribution": {
+        "3": 64,
+        "4": 60,
+        "5": 28,
+        "6": 25,
+        "7": 24,
+        "8": 10,
+        "9": 5,
+        "10": 4
+      }
+    },
+    "arith_mul": {
+      "n": 70,
+      "completion_tokens": {
+        "min": 228,
+        "median": 267,
+        "p90": 290,
+        "max": 344
+      },
+      "total_tokens_max": 453,
+      "split": "heldout",
+      "regime": "arith",
+      "n_examples_distribution": {
+        "3": 59,
+        "4": 9,
+        "5": 1,
+        "6": 1
+      }
+    },
+    "pos_AB": {
+      "n": 650,
+      "completion_tokens": {
+        "min": 256,
+        "median": 284,
+        "p90": 303,
+        "max": 327
+      },
+      "total_tokens_max": 450,
+      "split": "train",
+      "regime": "pos",
+      "n_examples_distribution": {
+        "2": 202,
+        "3": 154,
+        "4": 197,
+        "5": 69,
+        "6": 28
+      }
+    },
+    "pos_BA": {
+      "n": 550,
+      "completion_tokens": {
+        "min": 258,
+        "median": 285,
+        "p90": 305,
+        "max": 330
+      },
+      "total_tokens_max": 458,
+      "split": "train",
+      "regime": "pos",
+      "n_examples_distribution": {
+        "2": 165,
+        "3": 149,
+        "4": 154,
+        "5": 46,
+        "6": 36
+      }
+    },
+    "pos_rArB": {
+      "n": 500,
+      "completion_tokens": {
+        "min": 269,
+        "median": 296,
+        "p90": 314,
+        "max": 337
+      },
+      "total_tokens_max": 461,
+      "split": "train",
+      "regime": "pos",
+      "n_examples_distribution": {
+        "2": 156,
+        "3": 126,
+        "4": 148,
+        "5": 48,
+        "6": 22
+      }
+    },
+    "pos_rBrA": {
+      "n": 200,
+      "completion_tokens": {
+        "min": 270,
+        "median": 296,
+        "p90": 315,
+        "max": 334
+      },
+      "total_tokens_max": 461,
+      "split": "heldout",
+      "regime": "pos",
+      "n_examples_distribution": {
+        "2": 56,
+        "3": 49,
+        "4": 62,
+        "5": 27,
+        "6": 6
+      }
+    }
+  },
+  "verification": {
+    "golds_code_computed": 2190,
+    "kept_problems_proven_unique": 2190,
+    "tokenization_roundtrip_checked": 2190,
+    "traces_over_cap": 0,
+    "id_leakage": 0,
+    "structural_leakage": 0,
+    "tokenizer_gate": {
+      "passed": true,
+      "checks": {
+        "1. round-trip (2 independent decoders)": true,
+        "2. reference-match (ids == original, prompt+completion)": true,
+        "3. special-token layout matches reference": true,
+        "4. mask boundary position matches reference": true
+      }
+    }
+  }
+}

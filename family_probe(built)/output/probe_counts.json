@@ -1,0 +1,77 @@
+{
+  "bit_manipulation": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 27,
+      "hypothesis_formed": 27,
+      "rule_unknown": 26
+    },
+    "available_by_status": {
+      "rule_found": 1364,
+      "hypothesis_formed": 121,
+      "rule_unknown": 117
+    }
+  },
+  "cipher": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 80
+    },
+    "available_by_status": {
+      "rule_found": 1576
+    }
+  },
+  "cryptarithm": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 27,
+      "hypothesis_formed": 27,
+      "rule_unknown": 26
+    },
+    "available_by_status": {
+      "rule_found": 65,
+      "hypothesis_formed": 71,
+      "rule_unknown": 687
+    }
+  },
+  "equation_numeric": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 27,
+      "hypothesis_formed": 27,
+      "rule_unknown": 26
+    },
+    "available_by_status": {
+      "rule_found": 561,
+      "hypothesis_formed": 57,
+      "rule_unknown": 114
+    }
+  },
+  "gravity": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 80
+    },
+    "available_by_status": {
+      "rule_found": 1597
+    }
+  },
+  "numeral": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 80
+    },
+    "available_by_status": {
+      "rule_found": 1576
+    }
+  },
+  "unit_conversion": {
+    "sampled_total": 80,
+    "sampled_by_status": {
+      "rule_found": 80
+    },
+    "available_by_status": {
+      "rule_found": 1594
+    }
+  }
+}

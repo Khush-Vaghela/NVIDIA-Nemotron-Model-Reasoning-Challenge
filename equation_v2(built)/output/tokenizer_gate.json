@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "checks": {
+    "1. round-trip (2 independent decoders)": true,
+    "2. reference-match (ids == original, prompt+completion)": true,
+    "3. special-token layout matches reference": true,
+    "4. mask boundary position matches reference": true
+  }
+}

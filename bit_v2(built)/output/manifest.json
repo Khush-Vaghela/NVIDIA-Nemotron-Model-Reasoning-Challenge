@@ -1,0 +1,130 @@
+{
+  "token_limit": 8192,
+  "trace_caps": {
+    "median_lt": 3500,
+    "p90_lt": 4000,
+    "max_lt": 4500
+  },
+  "heldout_cells": [
+    "negated_ops"
+  ],
+  "train": {
+    "n": 2800,
+    "completion_tokens": {
+      "min": 771,
+      "median": 1109,
+      "p90": 1218,
+      "max": 1316
+    },
+    "total_tokens_max": 1651
+  },
+  "heldout": {
+    "n": 300,
+    "completion_tokens": {
+      "min": 960,
+      "median": 1212,
+      "p90": 1293,
+      "max": 1334
+    },
+    "total_tokens_max": 1669
+  },
+  "per_cell": {
+    "basic_mixed": {
+      "n": 2000,
+      "completion_tokens": {
+        "min": 838,
+        "median": 1148,
+        "p90": 1241,
+        "max": 1316
+      },
+      "total_tokens_max": 1651,
+      "split": "train",
+      "n_examples_distribution": {
+        "8": 4,
+        "9": 38,
+        "10": 206,
+        "11": 548,
+        "12": 1204
+      },
+      "op_usage": {
+        "AND": 1307,
+        "NOT": 1793,
+        "XOR": 1732,
+        "ID": 1360,
+        "OR": 1641,
+        "C1": 444,
+        "C0": 323
+      }
+    },
+    "basic_simple": {
+      "n": 800,
+      "completion_tokens": {
+        "min": 771,
+        "median": 961,
+        "p90": 1014,
+        "max": 1050
+      },
+      "total_tokens_max": 1385,
+      "split": "train",
+      "n_examples_distribution": {
+        "8": 4,
+        "9": 39,
+        "10": 105,
+        "11": 258,
+        "12": 394
+      },
+      "op_usage": {
+        "C0": 467,
+        "C1": 500,
+        "ID": 751,
+        "NOT": 794
+      }
+    },
+    "negated_ops": {
+      "n": 300,
+      "completion_tokens": {
+        "min": 960,
+        "median": 1212,
+        "p90": 1293,
+        "max": 1334
+      },
+      "total_tokens_max": 1669,
+      "split": "heldout",
+      "n_examples_distribution": {
+        "9": 4,
+        "10": 28,
+        "11": 99,
+        "12": 169
+      },
+      "op_usage": {
+        "ANDN": 197,
+        "OR": 204,
+        "XOR": 218,
+        "AND": 159,
+        "NOT": 208,
+        "XORN": 192,
+        "C1": 39,
+        "ORN": 180,
+        "ID": 140,
+        "C0": 22
+      }
+    }
+  },
+  "verification": {
+    "rules_uniquely_determined": 3100,
+    "golds_solver_verified_on_all_examples": 3100,
+    "tokenization_roundtrip_checked": 3100,
+    "traces_over_cap": 0,
+    "id_leakage": 0,
+    "structural_leakage": 0,
+    "tokenizer_gate": {
+      "passed": true,
+      "checks": {
+        "1. round-trip (2 independent decoders)": true,
+        "2. reference-match (ids == original, prompt+completion)": true,
+        "3. special-token layout matches reference": true,
+        "4. mask boundary position matches reference": true
+      }
+    }
+  }
+}

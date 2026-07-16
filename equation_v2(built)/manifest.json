@@ -1,0 +1,276 @@
+{
+  "family": "equation_numeric_deduce",
+  "token_limit": 8192,
+  "trace_caps": {
+    "median_lt": 3000,
+    "p90_lt": 3000,
+    "max_lt": 4500
+  },
+  "heldout_cells": [
+    "determinant"
+  ],
+  "heldout_ops": [
+    "abs determinant",
+    "determinant"
+  ],
+  "train": {
+    "n": 3400,
+    "completion_tokens": {
+      "min": 328,
+      "median": 435,
+      "p90": 501,
+      "max": 780
+    },
+    "total_tokens_max": 950
+  },
+  "heldout": {
+    "n": 250,
+    "completion_tokens": {
+      "min": 346,
+      "median": 437,
+      "p90": 509,
+      "max": 606
+    },
+    "total_tokens_max": 757
+  },
+  "per_cell": {
+    "arithmetic": {
+      "n": 900,
+      "completion_tokens": {
+        "min": 347,
+        "median": 437,
+        "p90": 526,
+        "max": 639
+      },
+      "total_tokens_max": 784,
+      "split": "train",
+      "n_examples_distribution": {
+        "2": 61,
+        "3": 184,
+        "4": 277,
+        "5": 204,
+        "6": 112,
+        "7": 42,
+        "8": 16,
+        "9": 4
+      },
+      "query_group_distribution": {
+        "2": 541,
+        "3": 263,
+        "4": 73,
+        "5": 22,
+        "6": 1
+      },
+      "target_op_usage": {
+        "addition": 156,
+        "subtraction": 145,
+        "negated absolute difference": 136,
+        "multiplication": 144,
+        "absolute difference": 156,
+        "reverse subtraction": 163
+      }
+    },
+    "concat": {
+      "n": 300,
+      "completion_tokens": {
+        "min": 404,
+        "median": 449,
+        "p90": 481,
+        "max": 504
+      },
+      "total_tokens_max": 642,
+      "split": "train",
+      "n_examples_distribution": {
+        "2": 41,
+        "3": 71,
+        "4": 109,
+        "5": 45,
+        "6": 34
+      },
+      "query_group_distribution": {
+        "2": 300
+      },
+      "target_op_usage": {
+        "concatenation": 151,
+        "reverse concatenation": 149
+      }
+    },
+    "determinant": {
+      "n": 250,
+      "completion_tokens": {
+        "min": 346,
+        "median": 437,
+        "p90": 509,
+        "max": 606
+      },
+      "total_tokens_max": 757,
+      "split": "heldout",
+      "n_examples_distribution": {
+        "2": 10,
+        "3": 48,
+        "4": 78,
+        "5": 63,
+        "6": 30,
+        "7": 18,
+        "8": 3
+      },
+      "query_group_distribution": {
+        "2": 130,
+        "3": 96,
+        "4": 23,
+        "5": 1
+      },
+      "target_op_usage": {
+        "abs determinant": 129,
+        "determinant": 121
+      }
+    },
+    "digit_agg": {
+      "n": 600,
+      "completion_tokens": {
+        "min": 336,
+        "median": 423,
+        "p90": 481,
+        "max": 682
+      },
+      "total_tokens_max": 820,
+      "split": "train",
+      "n_examples_distribution": {
+        "2": 66,
+        "3": 135,
+        "4": 213,
+        "5": 116,
+        "6": 55,
+        "7": 11,
+        "8": 4
+      },
+      "query_group_distribution": {
+        "2": 501,
+        "3": 86,
+        "4": 12,
+        "6": 1
+      },
+      "target_op_usage": {
+        "digit product sum": 101,
+        "cross multiply": 102,
+        "digit sum diff": 109,
+        "digit sum sum": 97,
+        "digit product diff": 87,
+        "cross multiply rev": 104
+      }
+    },
+    "digitwise": {
+      "n": 600,
+      "completion_tokens": {
+        "min": 358,
+        "median": 443,
+        "p90": 513,
+        "max": 636
+      },
+      "total_tokens_max": 782,
+      "split": "train",
+      "n_examples_distribution": {
+        "2": 77,
+        "3": 135,
+        "4": 186,
+        "5": 122,
+        "6": 68,
+        "7": 11,
+        "8": 1
+      },
+      "query_group_distribution": {
+        "2": 500,
+        "3": 67,
+        "4": 33
+      },
+      "target_op_usage": {
+        "digit multiply rev": 128,
+        "digit multiply": 101,
+        "digit sub mod10": 111,
+        "digit absolute diff": 112,
+        "digit add mod10": 148
+      }
+    },
+    "modular": {
+      "n": 500,
+      "completion_tokens": {
+        "min": 328,
+        "median": 439,
+        "p90": 524,
+        "max": 780
+      },
+      "total_tokens_max": 950,
+      "split": "train",
+      "n_examples_distribution": {
+        "2": 22,
+        "3": 85,
+        "4": 127,
+        "5": 136,
+        "6": 88,
+        "7": 29,
+        "8": 12,
+        "10": 1
+      },
+      "query_group_distribution": {
+        "2": 143,
+        "3": 266,
+        "4": 90,
+        "6": 1
+      },
+      "target_op_usage": {
+        "max mod min": 112,
+        "integer division": 90,
+        "modulo": 90,
+        "reverse division": 107,
+        "reverse modulo": 101
+      }
+    },
+    "offsets": {
+      "n": 500,
+      "completion_tokens": {
+        "min": 341,
+        "median": 420,
+        "p90": 468,
+        "max": 514
+      },
+      "total_tokens_max": 653,
+      "split": "train",
+      "n_examples_distribution": {
+        "2": 68,
+        "3": 145,
+        "4": 151,
+        "5": 85,
+        "6": 51
+      },
+      "query_group_distribution": {
+        "2": 497,
+        "3": 3
+      },
+      "target_op_usage": {
+        "sub+1": 84,
+        "sub-1": 77,
+        "add+1": 82,
+        "add-1": 85,
+        "multiply+1": 67,
+        "multiply-1": 105
+      }
+    }
+  },
+  "verification": {
+    "rules_uniquely_determined": 3650,
+    "golds_solver_verified_on_all_examples": 3650,
+    "tokenization_roundtrip_checked": 3650,
+    "traces_over_cap": 0,
+    "id_leakage": 0,
+    "structural_leakage": 0,
+    "tokenizer_gate": {
+      "passed": true,
+      "checks": {
+        "1. round-trip (2 independent decoders)": true,
+        "2. reference-match (ids == original, prompt+completion)": true,
+        "3. special-token layout matches reference": true,
+        "4. mask boundary position matches reference": true
+      }
+    }
+  }
+}
