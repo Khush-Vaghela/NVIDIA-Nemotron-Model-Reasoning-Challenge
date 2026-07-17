@@ -35,16 +35,6 @@ The model is not failing the hard families by reasoning incorrectly — it is ra
 the 7,680-token budget and never boxing an answer. The lever, therefore, is not better
 rule-coverage but **concise, bounded, terminating traces**.
 
-## What we did NOT find useful
-
-Before settling on conciseness, we tested a structural-variant hypothesis on the numeral
-family: that augmenting with unseen rule structures (e.g. Roman→Arabic, other bases) would
-improve generalization. A held-out probe refuted this for most cases — the base model
-already generalizes to unseen numeral structures (Arabic→base-7: 100%, Roman→Arabic: 97%),
-with one narrow exception (base-7→decimal induction: 18%). The takeaway: **structural-variant
-augmentation is a narrow lever, not a broad one.** This redirected effort toward the
-truncation problem, where the real headroom lay.
-
 ## Method: concise, code-verified synthetic traces
 
 For each of the three high-headroom families (bit, equation, cryptarithm) we built a
